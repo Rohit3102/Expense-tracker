@@ -1,0 +1,43 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+
+
+  
+
+  <h1>Username: <%= rohit.username %></h1>
+
+  <a href="/createexpense">Add new Expense</a>
+  <a href="/profile">back</a>
+
+
+  <hr>
+
+  <h1>sum: <%= expense.reduce((ac, cv)=> ac+cv.amount, 0) %></h1>
+
+  <form action="/filter">
+    <select name="key">
+      <option value="amount">amount</option>
+      <option value="remarks">remarks</option>
+      <option value="paymentmode">paymentmode</option>
+      <option value="category">category</option>
+    </select>
+    <input type="text" name="value" placeholder="enter your search term">
+    <button>search</button>
+  </form>
+
+ <% expense.forEach(function(e, i){ %>
+
+  <h4> amount:<%= e.amount %></h4>
+  <h4>remarks: <%= e.remarks %></h4>
+  <h4> category: <%= e.category %></h4>
+  <h4> paymentmode: <%= e.paymentmode %></h4>
+  <h4> date: <%= e.date %></h4>
+
+  <a href="/delete/<%= e._id %>">Delete</a>
+  <a href="/update/<%= e._id %>">Edit</a>
+  <hr>
+ <% }) %>
+
+
+
+ <%- include("footer.ejs")%>

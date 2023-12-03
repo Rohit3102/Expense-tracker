@@ -1,0 +1,14 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+
+  <h1>Create your Expence</h1>
+  <form action="/update/<%= data._id %>" method="post">
+    <input value="<%= data.amount %>" type="number" name="amount" placeholder="Enter your amount"> <br> <br>
+    <input value="<%= data.remarks %>" type="text" name="remarks" placeholder="Enter your remarks"> <br> <br>
+    <input value="<%= data.category %>" type="text" name="category" placeholder="Enter your category"> <br> <br>
+    <input value="<%= data.paymentmode %>" type="text" name="paymentmode" placeholder="Enter your paymentmode"> <br> <br>
+    <button>update</button> <br> <br>
+  </form>
+
+
+  <%- include("footer.ejs")%>

@@ -1,0 +1,16 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+
+  <h1>Create your Expence</h1>
+  <form action="/createexpense" method="post">
+    <input type="number" name="amount" placeholder="Enter your amount"> <br> <br>
+    <input type="text" name="remarks" placeholder="Enter your remarks"> <br> <br>
+    <input type="text" name="category" placeholder="Enter your category"> <br> <br>
+    <input type="text" name="paymentmode" placeholder="Enter your paymentmode"> <br> <br>
+    <button>submit</button> <br> <br>
+    <h2>if! Already have an account</h2>
+    <a href="/login">login</a>
+  </form>
+
+
+  <%- include("footer.ejs")%>

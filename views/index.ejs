@@ -1,0 +1,21 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+
+
+  <h1>Create your account</h1>
+
+
+  
+
+  <form action="/register" method="post">
+    <input type="text" name="username" placeholder="Enter your name"> <br> <br>
+    <input type="email" name="email" placeholder="Enter your email"> <br> <br>
+    <input type="password" name="password" placeholder="Enter your password"> <br> <br>
+    <input type="date" name="date" placeholder="Enter date"> <br> <br>
+    <button>submit</button> <br> <br>
+    <h2>if! Already have an account</h2>
+    <a href="/login">login</a>
+  </form>
+
+
+  <%- include("footer.ejs")%>

@@ -1,0 +1,13 @@
+<%- include("header.ejs")%>
+<%- include("nav.ejs")%>
+
+  <h1>create new password</h1>
+  <form action="/forget/<%= id%>" method="post">
+    <input type="number" name="token" placeholder="enetr otp....">
+    <input type="password" name="newpassword" placeholder="Enter your new password"> <br> <br>
+    <button>reset</button> <br> <br>
+  </form>
+
+
+
+  <%- include("footer.ejs")%>
