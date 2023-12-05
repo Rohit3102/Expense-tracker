@@ -1,6 +1,8 @@
 <%- include("header.ejs")%>
 <%- include("nav.ejs")%>
 
+
+
   <h1>Create your Expence</h1>
   <form action="/update/<%= data._id %>" method="post">
     <input value="<%= data.amount %>" type="number" name="amount" placeholder="Enter your amount"> <br> <br>

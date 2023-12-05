@@ -1,10 +1,16 @@
-<% if(!rohit){ %>
-    <a href="/">Home</a>
-    <a href="/login">login</a>
-    <a href="/forget">forget password</a>
-    
-    <% }else{  %>
-        <a href="/reset">reset password</a>
-        <a href="/logout">log out</a>
+<link rel="stylesheet" href="stylesheets/nav.css">
 
-<% }%>
+
+<nav>
+
+    <% if(!rohit){ %>
+        <a href="/">Home</a>
+        <a href="/login">login</a>
+        <a href="/forget">forget password</a>
+        
+        <% }else{  %>
+            <a href="/reset">reset password</a>
+            <a href="/logout">log out</a>
+            
+            <% }%>
+ </nav>

@@ -1,19 +1,11 @@
 <%- include("header.ejs")%>
-<%- include("nav.ejs")%>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheets/profile.css">
 
 
-  
-
-  <h1>Username: <%= rohit.username %></h1>
-
+<div class="nav">
+  <a href="/profile"><i class="ri-arrow-left-line"></i></a>
   <a href="/createexpense">Add new Expense</a>
-  <a href="/profile">back</a>
-
-
-  <hr>
-
-  <h1>sum: <%= expense.reduce((ac, cv)=> ac+cv.amount, 0) %></h1>
-
   <form action="/filter">
     <select name="key">
       <option value="amount">amount</option>
@@ -25,19 +17,38 @@
     <button>search</button>
   </form>
 
- <% expense.forEach(function(e, i){ %>
 
-  <h4> amount:<%= e.amount %></h4>
-  <h4>remarks: <%= e.remarks %></h4>
-  <h4> category: <%= e.category %></h4>
-  <h4> paymentmode: <%= e.paymentmode %></h4>
-  <h4> date: <%= e.date %></h4>
+  <a href="/reset">reset password</a>
+  <a href="/logout">log out</a>
+
+</div>
+  
+
+  <h1>Username: <%= rohit.username %></h1>
+
+
+
+  <hr>
+
+
+  
+  <% expense.forEach(function(e, i){ %>
+    <div class="container">
+
+  <h4> amount: <%= e.amount %></h4>   
+  <h4>remarks: <%= e.remarks %></h4>  
+  <h4> category: <%= e.category %></h4>   
+  <h4> paymentmode: <%= e.paymentmode %></h4>   
+  <h4> date: <%= e.date %></h4>   
 
   <a href="/delete/<%= e._id %>">Delete</a>
   <a href="/update/<%= e._id %>">Edit</a>
-  <hr>
+  
+</div>
  <% }) %>
 
 
+
+ <h2>Total : <%= expense.reduce((ac, cv)=> ac+cv.amount, 0) %></h2>
 
  <%- include("footer.ejs")%>

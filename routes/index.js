@@ -88,24 +88,24 @@ router.get('/forget', function(req, res, next) {
 //   }
 // });
 
-router.post("/forget/:id", async function (req, res, next) {
+router.post("/forget/:id",async function(req,res,next){
   try {
-      const user = await userModel.findById(req.params.id);
-      if (!user)
-          return res.send("User not found! <a href='/forget'>Try Again</a>.");
-
-      if (user.token == req.body.token) {
+    const user = await userModel.findById( req.params.id );
+    if (!user)
+        return res.send("User not found! <a href='/forget'>Try Again</a>.");
+        if (user.token == req.body.token) {
           user.token = -1;
           await user.setPassword(req.body.newpassword);
           await user.save();
-          res.redirect("/signin");
+          res.redirect("/login");
+          console.log(req.body.token);
       } else {
           user.token = -1;
           await user.save();
           res.send("Invalid Token! <a href='/forget'>Try Again<a/>");
       }
-  } catch (error) {
-      res.send(error);
+  }catch(error){
+    res.send(error)
   }
 });
 router.get('/reset', isLoggedIn, function(req, res, next) {

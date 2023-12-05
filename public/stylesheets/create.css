@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html,body{
+    width: 100%;
+    height: 100%;
+  }
+  
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+  }
+
+  
+.nav{
+  width: 100%;
+  height: 8vh;
+  background-color: rgb(248, 198, 70);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4vw;
+  position: fixed;
+  top: 0;
+}
+
+.nav a{
+  text-decoration: none;
+  font-size: 1.5vw;
+}
+
+  
+  .form{
+    width: 30vw;
+    /* height: 60vh; */
+    padding: 2vw;
+    background-color: rgba(0, 0, 0, 0.565);
+    border-radius: 1vw;
+    backdrop-filter: 10px;
+  }
+   .form h1{
+    font-size: 2vw;
+    text-align: center;
+    margin: 2vw 0;
+    color: aliceblue;
+   }
+  
+   .form h2{
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 2vw 0;
+    color: #fff ;
+   }
+  
+  
+   input{
+    border-radius: .6vw;
+    padding: .3vw .8vw;
+    font-size: 1.2vw;
+    border: none;
+    margin: 0 4vw;
+    width: 70%;
+    height: 5vh;
+   }
+  
+   button{
+    font-size: 1.1vw;
+    padding: .5vw 1vw;
+    margin-left: 10vw;
+    background-color:#70AD27;
+    color: aliceblue;
+    border: none;
+    border-radius: 2vw;
+   }
+  
+   .form a{
+    margin: 2vw;
+    font-size: 1.1vw;
+    padding: .5vw 1vw;
+    background-color: rgb(26, 62, 192);
+    color: aliceblue;
+    border: none;
+    margin-left: 10vw;
+    text-decoration: none;
+    border-radius: 2vw;
+   }
