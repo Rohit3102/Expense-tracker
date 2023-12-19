@@ -1,8 +1,9 @@
 <%- include("header.ejs")%>
 <%- include("nav.ejs")%>
+<link rel="stylesheet" href="stylesheets/reset.css">
 
-  <h1>create new password</h1>
-  <form action="/sendmail" method="post">
+<form action="/sendmail" method="post">
+    <h1>Enter your email to send OTP</h1>
     <input type="email" name="email" placeholder="Enter your new email"> <br> <br>
     <button>send mail</button> <br> <br>
   </form>

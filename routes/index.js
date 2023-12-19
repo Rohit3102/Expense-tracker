@@ -28,10 +28,7 @@ router.post('/register', (req, res, next)=>{
 });
 
 router.get('/profile', isLoggedIn, async function(req, res, next) {
-
   try {
-
-
     let {expense} = await req.user.populate('expense')
   res.render('profile', { expense, rohit: req.user  });
     
@@ -48,7 +45,6 @@ router.get('/profile', isLoggedIn, async function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render('login', { rohit: req.user  });
 });
-
 router.post('/login', passport.authenticate("local", {
   successRedirect: "/profile",
   failureRedirect: "/login"

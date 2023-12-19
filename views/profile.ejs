@@ -19,18 +19,13 @@
 
 
   <a href="/reset">reset password</a>
-  <a href="/logout">log out</a>
+  <a id="logout" href="/logout">log out</a>
 
 </div>
   
 
   <h1>Username: <%= rohit.username %></h1>
-
-
-
   <hr>
-
-
   
   <% expense.forEach(function(e, i){ %>
     <div class="container">
@@ -42,7 +37,7 @@
   <h4> date: <%= e.date %></h4>   
 
   <a href="/delete/<%= e._id %>">Delete</a>
-  <a href="/update/<%= e._id %>">Edit</a>
+  <a id="edit" href="/update/<%= e._id %>">Edit</a>
   
 </div>
  <% }) %>
