@@ -20,6 +20,7 @@ body{
 }
 
 .form{
+  height: 50vh;
   width: 30vw;
   padding: 2vw;
   background-color: rgba(245, 245, 220, 0.565);
@@ -32,6 +33,13 @@ body{
   font-size: 2vw;
   text-align: center;
   margin: 2vw 0;
+ }
+
+ .form a{
+  margin-top: 3vw;
+  font-size: 1.3vw;
+  text-align: center;
+  margin-left: 2vw;
  }
 
 
@@ -48,7 +56,7 @@ body{
  button{
   font-size: 1.1vw;
   padding: .5vw 1vw;
-  margin-left: 10vw;
+  margin-left: 3vw;
   background-color: rgb(26, 84, 192);
   color: aliceblue;
   border: none;
