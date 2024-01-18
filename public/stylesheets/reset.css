@@ -37,6 +37,7 @@
     margin: 0 4vw;
     width: 70%;
     height: 5vh;
+    border: none;
    }
   
    button{
@@ -49,3 +50,33 @@
     border-radius: 2vw;
    }
   
+
+   @media (max-width:600px) {
+ 
+    
+    form{
+      /* height: 40vh; */
+      width: 80vw;
+      border-radius: 3vw;
+      text-align: center;
+    }
+    h1{
+      font-size: 8vw;
+      text-align: center;
+      margin: 1.1vw 0;
+      margin-bottom: 2vw;
+     }
+  
+    
+     input{
+      font-size: 5vw;
+      margin: 0 8vw;
+      width: 80%;
+     }
+    
+     button{
+      font-size: 5vw;
+      padding: 2vw 5vw;
+     }
+    
+   }

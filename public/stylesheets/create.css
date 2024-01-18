@@ -91,3 +91,54 @@
     text-decoration: none;
     border-radius: 2vw;
    }
+
+   @media (max-width: 600px) {
+ 
+  .nav{
+    padding: 0 8vw;
+  }
+  
+  .nav a{
+    font-size: 6vw;
+  }
+  
+    
+    .form{
+      height: 50vh;
+      width: 80vw;
+      border-radius: 3vw;
+      text-align: center;
+    }
+     .form h1{
+      margin: 5vw;
+      font-size: 7vw;
+     }
+    
+     .form h2{
+      font-size: 7vw;
+     }
+    
+    
+     input{
+      font-size: 5vw;
+      margin: 0 8vw;
+      width: 80%;
+     }
+    
+     button{
+      font-size: 5vw;
+      padding: 2vw 5vw;
+     }
+    
+     .form a{
+      margin: 2vw;
+      font-size: 1.1vw;
+      padding: .5vw 1vw;
+      background-color: rgb(26, 62, 192);
+      color: aliceblue;
+      border: none;
+      margin-left: 10vw;
+      text-decoration: none;
+      border-radius: 2vw;
+     }
+   }
